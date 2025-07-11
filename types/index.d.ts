@@ -1,8 +1,8 @@
 import { Coordinate, DmRet, ErrorDisplay, FindDir, FindRet, GetWindowFlag, KeyState, OcrRet, Size, WindowState } from './types';
-declare type DisplayType = 'normal' | 'gdi' | 'gdi2' | 'dx' | 'dx2' | 'dx3';
-declare type MouseType = 'normal' | 'windows' | 'windows2' | 'windows3' | 'dx' | 'dx2';
-declare type KeypadType = 'normal' | 'windows' | 'dx';
-declare type FindPicDir = FindDir.LeftToRightAndTopToBottom | FindDir.LeftToRightAndBottomToTop | FindDir.RightToLeftAndTopToBottom | FindDir.RightToLeftAndBottomToTop;
+type DisplayType = 'normal' | 'gdi' | 'gdi2' | 'dx' | 'dx2' | 'dx3';
+type MouseType = 'normal' | 'windows' | 'windows2' | 'windows3' | 'dx' | 'dx2';
+type KeypadType = 'normal' | 'windows' | 'dx';
+type FindPicDir = FindDir.LeftToRightAndTopToBottom | FindDir.LeftToRightAndBottomToTop | FindDir.RightToLeftAndTopToBottom | FindDir.RightToLeftAndBottomToTop;
 declare function setMouseRange(): void;
 declare function setMouseRange(x1: number, y1: number, x2: number, y2: number): void;
 declare const _default: {
@@ -26,7 +26,7 @@ declare const _default: {
     keyPress(keyCode: number): DmRet;
     keyDown(keyCode: number): DmRet;
     keyUp(keyCode: number): DmRet;
-    findWindow(className: string, title: string, parentHWnd?: number | undefined): number | undefined;
+    findWindow(className: string, title: string, parentHWnd?: number): number | undefined;
     enumWindow(className: string, title: string, filter: number, parentHWnd?: number): number[];
     getWindow(hWnd: number, flag: GetWindowFlag): number;
     getPointWindow(x: number, y: number): number;

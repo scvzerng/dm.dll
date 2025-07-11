@@ -13,7 +13,7 @@
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc --noEmit --watch "
   },
   "repository": {
     "type": "git",
@@ -22,13 +22,11 @@
   "author": "aweiu",
   "license": "ISC",
   "dependencies": {
-    "winax": "^1.18.0"
+    "winax": "^3.6.2"
   },
   "devDependencies": {
-    "@types/node": "^10.3.0",
-    "tslint": "^5.10.0",
-    "tslint-config-standard": "^7.0.0",
-    "typescript": "^2.9.1"
+    "@types/node": "^20.19.7",
+    "typescript": "^5.8.3"
   },
   "os": [
     "win32"

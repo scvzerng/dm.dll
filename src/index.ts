@@ -18,6 +18,7 @@ type DisplayType = 'normal' | 'gdi' | 'gdi2' | 'dx' | 'dx2' | 'dx3'
 type MouseType = 'normal' | 'windows' | 'windows2' | 'windows3' | 'dx' | 'dx2'
 type KeypadType = 'normal' | 'windows' | 'dx'
 
+
 type FindPicDir =
   FindDir.LeftToRightAndTopToBottom
   | FindDir.LeftToRightAndBottomToTop
@@ -26,10 +27,10 @@ type FindPicDir =
 
 function getDM () {
   try {
-    return new winax.Object('dm.dmsoft')
+    return new winax.Object('footman')
   } catch (e) {
-    execSync(`regsvr32 ${path.resolve(__dirname, 'dm.dll')} /s`)
-    return new winax.Object('dm.dmsoft')
+    // execSync(`regsvr32 ${path.resolve(__dirname, 'dm.dll')} /s`)
+    return new winax.Object('footman')
   }
 }
 
